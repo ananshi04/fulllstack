@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>High School Grader</title>
+</head>
+<body>
+
+    <h2>High School Grader</h2>
+
+    <input type="number" id="m1" placeholder="Marks 1">
+    <input type="number" id="m2" placeholder="Marks 2">
+    <input type="number" id="m3" placeholder="Marks 3">
+    <input type="number" id="m4" placeholder="Marks 4">
+    <input type="number" id="m5" placeholder="Marks 5">
+
+    <button onclick="calculate()">Calculate Average</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            let marks = [
+                Number(document.getElementById("m1").value),
+                Number(document.getElementById("m2").value),
+                Number(document.getElementById("m3").value),
+                Number(document.getElementById("m4").value),
+                Number(document.getElementById("m5").value)
+            ];
+
+            let sum = 0;
+
+            for (let i = 0; i < marks.length; i++) {
+                sum = sum + marks[i];
+            }
+
+            let average = sum / marks.length;
+
+            document.getElementById("result").innerHTML =
+                "Total: " + sum + "<br>Average: " + average;
+        }
+    </script>
+
+</body>
+</html>
