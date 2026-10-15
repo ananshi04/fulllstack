@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple of 5</title>
+</head>
+<body>
+    <h1>Multiple of 5 Checker</h1>
+    <button onclick="checkMultipleOf5()">Check</button>
+    <p id="result"></p>
+    <script>
+        function checkMultipleOf5() {
+            for(let i = 1; i <= 50; i++) {
+                if (i % 5 === 0) {
+                    document.getElementById("result").innerHTML += i + " ";
+                }
+            }   
+        }
+    </script>
+</body>
+</html>
