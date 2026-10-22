@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>15 Minute Timer</title>
+</head>
+<body>
+
+    <h2>15 Minute Timer</h2>
+
+    <h1 id="timer">15:00</h1>
+
+    <button onclick="startTimer()">Start Timer</button>
+
+    <script>
+     
+let time = 15 * 60;
+let interval;
+function startTimer() {
+    clearInterval(interval);
+
+    time = 15 * 60;
+
+    document.getElementById("timer").innerHTML = "15:00";
+
+    interval = setInterval(function () {
+        let minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+
+        document.getElementById("timer").innerHTML =
+            minutes + ":" + String(seconds).padStart(2, "0");
+
+        time--;
+
+        if (time < 0) {
+            clearInterval(interval);
+
+            setTimeout(function () {
+                alert("Time is up!");
+            }, 0);
+        }
+    }, 1000);
+}
+
+    
+    </script>
+
+</body>
+</html>
