@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <span id="countvalue">0</span>
+        times clicked............
+    </p>
+    <button id="btn">Click Me</button>
+    <script>
+        let arr=[1,2,3,4,5];
+        console.log(arr);
+
+        let narr=arr.map((n)=>{return n**2});
+        console.log(narr);
+
+        narr=arr.filter(n=>n>3);
+        console.log(narr);
+
+        narr=arr.find(n=>n>1);
+        console.log(narr);
+
+        narr=arr.reduce((acc, n) => acc + n, 0);
+        console.log(narr);
+
+    </script>
+</body>
+</html>
+
+//WAP to convert a user enter number into binary and hexadecimal value......
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num" placeholder="Enter a number">
+    <button id="btn">Convert</button>
+    <p>Binary: <span id="binary"></span></p>
+    <p>Hexadecimal: <span id="hexadecimal"></span></p>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", () => {
+            const num = parseInt(document.getElementById("num").value);
+            if (!isNaN(num)) {
+                document.getElementById("binary").innerText = num.toString(2);
+                document.getElementById("hexadecimal").innerText = num.toString(16).toUpperCase();
+            } else {
+                alert("Please enter a valid number.");
+            }
+        });
+    </script>
+</body>
+</html> -->
